@@ -58,5 +58,18 @@ resource "snowflake_table" "dev_sales" {
     nullable = false
     comment = "Transaction Date on which sales has happened."
   }
+
+    column {
+    name="Transaction_TIME"
+    type = "TIME"
+    nullable = false
+    comment = "Transaction Time on which sales has happened."
+  }
+      column {
+    name="TERMINAL"
+    type = "VARCHAR(10)"
+    nullable = false
+    comment = "Terminal On which transaction has happened."
+  }
   
 }
